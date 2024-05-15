@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     let items = [
       {
         title: "6 ways to prepare breakfast for 30",
-        description: `<p>Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+        description: `<img src="/img/blog/details/details-pic.jpg" alt=""><p>Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
         dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit
         aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur
         sed, convallis at tellus. Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada.
@@ -138,7 +138,7 @@ module.exports = {
     await queryInterface.bulkInsert("Blogs", items, {});
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     await queryInterface.bulkDelete("Blogs", null, {});
-  }
+  },
 };
